@@ -4,8 +4,8 @@ from telegram import Bot, InputMediaPhoto, InlineKeyboardButton, InlineKeyboardM
 from telegram.ext import ApplicationBuilder, MessageHandler, filters
 
 # ----- USER CONFIG -----
-BOT_TOKEN = "YOUR_BOT_TOKEN"
-TMDB_API = "YOUR_TMDB_KEY"
+BOT_TOKEN = "8488614783:AAE4Z1GZDYxaDMMxOc9Owofbpw3kaokPIHs"
+TMDB_API = "c5b6317ff1ba730c5742a94440d31af4"
 
 DB_CHANNEL = -1002837138676
 MOVIE_CHANNEL = -1002481569627
