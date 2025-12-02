@@ -1,7 +1,11 @@
-import logging
+"""import logging
 import requests
-from telegram import Bot, InputMediaPhoto, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import ApplicationBuilder, MessageHandler, filters
+
+try:
+    from telegram import Bot, InputMediaPhoto, InlineKeyboardButton, InlineKeyboardMarkup
+    from telegram.ext import ApplicationBuilder, MessageHandler, filters
+except ModuleNotFoundError as e:
+    raise ModuleNotFoundError("python-telegram-bot package not found. Install dependencies with 'pip install -r requirements.txt' or run 'pip install python-telegram-bot'.") from e
 
 # ----- USER CONFIG -----
 BOT_TOKEN = "8488614783:AAE4Z1GZDYxaDMMxOc9Owofbpw3kaokPIHs"
@@ -17,7 +21,6 @@ BACKUP_LINK = "http://t.me/Pixell_Pulse"
 
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=BOT_TOKEN)
-
 
 def search_tmdb(query):
     url = f"https://api.themoviedb.org/3/search/multi?api_key={TMDB_API}&query={query}"
@@ -90,4 +93,4 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
-    asyncio.run(main())
+    asyncio.run(main())"
